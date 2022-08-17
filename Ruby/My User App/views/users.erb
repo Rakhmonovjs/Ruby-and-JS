@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Users index page</title>
+        <style>
+            table {
+                border-collapse: collapse;
+            }
+            td, th {
+                border: 1px solid black;
+                padding: 1em;      }
+        </style>
+    </head>
+    <body>
+    <div class="sizu">
+    <div class="waviy">
+    <span style="--i:1">U</span>
+    <span style="--i:2">s</span>
+    <span style="--i:3">e</span>
+    <span style="--i:4">r</span>
+    <span style="--i:5">s</span>
+   </div>
+   </div>
+        <table>
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Age</th>
+                <th>Email</th>
+            </tr>
+            <%  User.all.collect do |row| %>
+            <tr>
+                <td data-column="First Name"><%= row.firstname%></td>
+                <td data-column="Last Name"><%= row.lastname%></td>
+                <td data-column="Job Title"><%= row.age%></td>
+                <td data-column="Twitter"><%= row.email%></td>
+            </tr>
+            <% end %>
+        </table>
+#         <style>
+
+
+      </style>
+    </body>
+</html>
